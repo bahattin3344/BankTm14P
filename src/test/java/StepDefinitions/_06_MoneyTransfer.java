@@ -1,4 +1,4 @@
-package Bilgehan.StepDefinitions;
+package StepDefinitions;
 
 import Bilgehan.Pages.Elements;
 import Utilities.GWD;
