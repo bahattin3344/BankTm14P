@@ -36,55 +36,55 @@ public class Elements extends Parent{
     public WebElement logOutButton;
 
     @FindBy(linkText = "Transfer Funds")
-    public WebElement moneyTransferButton;
+    private WebElement moneyTransferButton;
 
     @FindBy(xpath = "//input[@id='amount']")
-    public WebElement inputAmount;
+    private WebElement inputAmount;
 
     @FindBy(xpath = "//select[@id='fromAccountId']")
-    public WebElement selectFromAccount;
+    private WebElement selectFromAccount;
 
     @FindBy(xpath = "//select[@id='toAccountId']")
-    public WebElement selectToAccount;
+    private WebElement selectToAccount;
 
     @FindBy(xpath = "//input[@value='Transfer']")
-    public WebElement transferButton;
+    private WebElement transferButton;
 
     @FindBy(linkText = "Bill Pay")
-    public WebElement billPayButton;
+    private WebElement billPayButton;
 
     @FindBy(xpath = "//input[@name='payee.name']")
-    public WebElement inputPayeeName;
+    private WebElement inputPayeeName;
 
     @FindBy(xpath = "//input[@name='payee.address.street']")
-    public WebElement inputPayeeAddress;
+    private WebElement inputPayeeAddress;
 
     @FindBy(xpath = "//input[@name='payee.address.city']")
-    public WebElement inputPayeeCity;
+    private WebElement inputPayeeCity;
 
     @FindBy(xpath = "//input[@name='payee.address.state']")
-    public WebElement inputPayeeState;
+    private WebElement inputPayeeState;
 
     @FindBy(xpath = "//input[@name='payee.address.zipCode']")
-    public WebElement inputPayeeZipCode;
+    private WebElement inputPayeeZipCode;
 
     @FindBy(xpath = "//input[@name='payee.phoneNumber']")
-    public WebElement inputPayeeNumber;
+    private WebElement inputPayeeNumber;
 
     @FindBy(xpath = "//input[@name='payee.accountNumber']")
-    public WebElement inputPayeeAccount;
+    private WebElement inputPayeeAccount;
 
     @FindBy(xpath = "//input[@name='verifyAccount']")
-    public WebElement inputVerifyAccount;
+    private WebElement inputVerifyAccount;
 
     @FindBy(xpath = "//input[@name='amount']")
-    public WebElement inputBillAmount;
+    private WebElement inputBillAmount;
 
     @FindBy(xpath = "//input[@value='Send Payment']")
-    public WebElement sendPaymentButton;
+    private WebElement sendPaymentButton;
 
     @FindBy(xpath = "//div[@ng-show='showForm']//h1")
-    public WebElement successfullBill;
+    private WebElement successfullBill;
     @FindBy(xpath = "//*[@id=\"leftPanel\"]/ul/li[6]/a")
     public WebElement info;
     @FindBy(css = "[id='customer.firstName']")
@@ -103,6 +103,14 @@ public class Elements extends Parent{
     public WebElement selectAccount;
     @FindBy(css = "[value='Apply Now']")
     public WebElement krediOnay;
+    @FindBy(css = "#leftPanel > ul > li:nth-child(1) > a")
+    public WebElement newAccount;
+    @FindBy(css = "#type")
+    public WebElement accountType;
+    @FindBy(css = "#rightPanel > div > div > form > div > input")
+    public WebElement accountButton;
+    @FindBy(css = "#rightPanel > div > div > h1")
+    public WebElement accountSucces;
 
     public WebElement getWebElement(String element){
         switch (element){

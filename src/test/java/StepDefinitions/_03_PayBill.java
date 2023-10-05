@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import Bilgehan.Pages.Elements;
+
 import Pages.Elements;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
