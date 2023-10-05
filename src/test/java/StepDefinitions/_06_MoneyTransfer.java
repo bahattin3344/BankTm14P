@@ -13,7 +13,7 @@ import java.util.List;
 
 public class _06_MoneyTransfer {
 
-    Elements elements = new Elements();
+    Elements eb=new Elements();
 
     @Given("Navigate to parabank")
     public void navigateToParabank() {
@@ -22,12 +22,17 @@ public class _06_MoneyTransfer {
 
     @When("Send keys on the element")
     public void sendKeysOnTheElement(DataTable dt) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         List<List<String>> items = dt.asLists(String.class);
 
         for (int i = 0; i < items.size(); i++) {
-            WebElement e = elements.getWebElement(items.get(i).get(0));
+            WebElement e = eb.getWebElement(items.get(i).get(0));
             String yazi = items.get(i).get(1);
-            elements.mySendKeys(e, yazi);
+            eb.mySendKeys(e, yazi);
         }
     }
 
@@ -36,8 +41,8 @@ public class _06_MoneyTransfer {
         List<String> items = dt.asList(String.class);
 
         for (int i = 0; i < items.size(); i++) {
-            WebElement e = elements.getWebElement(items.get(i));
-            elements.myClick(e);
+            WebElement e = eb.getWebElement(items.get(i));
+            eb.myClick(e);
         }
     }
 
@@ -46,17 +51,22 @@ public class _06_MoneyTransfer {
         List<String> items = dt.asList(String.class);
 
         for (int i = 0; i < items.size(); i++) {
-            WebElement e = elements.getWebElement(items.get(i));
+            WebElement e = eb.getWebElement(items.get(i));
             Assert.assertTrue(e.isEnabled());
         }
     }
 
     @Then("Select by the web element")
     public void selectByTheWebElement(DataTable dt) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         List<List<String>> items = dt.asLists(String.class);
 
         for (int i = 0; i < items.size(); i++) {
-            WebElement e = elements.getWebElement(items.get(i).get(0));
+            WebElement e = eb.getWebElement(items.get(i).get(0));
             int index = Integer.parseInt(items.get(i).get(1));
 
             Select select = new Select(e);

@@ -83,8 +83,48 @@ public class Elements extends Parent{
     @FindBy(xpath = "//input[@value='Send Payment']")
     private WebElement sendPaymentButton;
 
-    @FindBy(xpath = "//div[@ng-show='showForm']//h1")
+    @FindBy(xpath = "//div[@ng-show='showResult']//h1")
     private WebElement successfullBill;
+
+    @FindBy(xpath = "//h1[@class='title']")
+    private WebElement successTransfer;
+
+    @FindBy(linkText = "Accounts Overview")
+    private WebElement accountsOverview;
+
+    @FindBy(xpath = "(//tr[@class='ng-scope']//td//a)[1]")
+    private WebElement firstAccount;
+
+    @FindBy(xpath = "(//table[@id='transactionTable']//td//a)[1]")
+    private WebElement hesapIslemleri;
+
+    @FindBy(xpath = "//table/tbody/tr[1]/td[2]")
+    private WebElement transactionID;
+
+    @FindBy(linkText = "Find Transactions")
+    private WebElement findTransactions;
+
+    @FindBy(xpath = "//input[@id='criteria.transactionId']")
+    private WebElement inputTransaction;
+
+    @FindBy(xpath = "//button[@ng-click=\"criteria.searchType = 'ID'\"]")
+    private WebElement findTransactionsButton;
+
+    @FindBy(xpath = "(//tr[@class='ng-scope']//td)[2]")
+    private WebElement balanceCheck;
+
+    @FindBy(xpath = "(//tr[@class='ng-scope']//td)[3]")
+    private WebElement availableAmount;
+
+    @FindBy(xpath = "//tr[@class='ng-scope']//td[@class='ng-binding']")
+    private WebElement date;
+
+    @FindBy(xpath = "//td//a[@class='ng-binding']")
+    private WebElement fundsTransfer;
+
+    @FindBy(xpath = "//td[@ng-if=\"transaction.type == 'Debit'\"]")
+    private WebElement debit;
+
     @FindBy(xpath = "//*[@id=\"leftPanel\"]/ul/li[6]/a")
     public WebElement info;
     @FindBy(css = "[id='customer.firstName']")
@@ -111,6 +151,45 @@ public class Elements extends Parent{
     public WebElement accountButton;
     @FindBy(css = "#rightPanel > div > div > h1")
     public WebElement accountSucces;
+    //
+    @FindBy(linkText = "Register")
+    private WebElement register;
+
+    @FindBy(id = "customer.firstName")
+    private WebElement inputFirstName;
+
+    @FindBy(id = "customer.lastName")
+    private WebElement inputLastName;
+
+    @FindBy(id = "customer.address.street")
+    private WebElement inputAddress;
+
+    @FindBy(id = "customer.address.city")
+    private WebElement inputCity;
+
+    @FindBy(id = "customer.address.state")
+    private WebElement inputState;
+
+    @FindBy(id = "customer.address.zipCode")
+    private WebElement inputZipCode;
+
+    @FindBy(id = "customer.phoneNumber")
+    private WebElement inputPhoneNumber;
+
+    @FindBy(id = "customer.ssn")
+    private WebElement inputSSN;
+
+    @FindBy(id = "customer.username")
+    private WebElement inputUsername2;
+
+    @FindBy(id = "customer.password")
+    private WebElement inputPassword2;
+
+    @FindBy(id = "repeatedPassword")
+    private WebElement inputConfirm;
+
+    @FindBy(xpath = "//input[@value='Register']")
+    private WebElement registerButton;
 
     public WebElement getWebElement(String element){
         switch (element){
@@ -144,6 +223,31 @@ public class Elements extends Parent{
             case "downPayment": return this.downPayment;
             case "selectAccount" :return this.selectAccount;
             case  " krediOnay" :   return this.krediOnay;
+            case "successTransfer" : return this.successTransfer;
+            case "accountsOverview" : return this.accountsOverview;
+            case "firstAccount" : return this.firstAccount;
+            case "hesapIslemleri" : return this.hesapIslemleri;
+            case "transactionID" : return this.transactionID;
+            case "findTransactions" : return this.findTransactions;
+            case "inputTransaction" : return this.inputTransaction;
+            case "findTransactionsButton" : return this.findTransactionsButton;
+            case "balanceCheck" : return this.balanceCheck;
+            case "availableAmount" : return this.availableAmount;
+            case "date" : return this.date;
+            case "fundsTransfer" : return this.fundsTransfer;
+            case "Register" : return this.register;
+            case "customer.firstName" : return this.inputFirstName;
+            case "customer.lastName" : return this.inputLastName;
+            case "customer.address.street" : return this.inputAddress;
+            case "customer.address.city" : return this.inputCity;
+            case "customer.address.state" : return this.inputState;
+            case "customer.address.zipCode" : return this.inputZipCode;
+            case "customer.phoneNumber" : return this.inputPhoneNumber;
+            case "customer.ssn" : return this.inputSSN;
+            case "customer.username" : return this.inputUsername2;
+            case "customer.password" : return this.inputPassword2;
+            case "repeatedPassword" : return this.inputConfirm;
+            case "//input[@value='Register']" : return this.registerButton;
         }
         return null;
     }

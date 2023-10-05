@@ -3,8 +3,8 @@ Feature: Pay Bill
   Background:
     Given Navigate to parabank
     When Send keys on the element
-      | inputUsername | lakers14@mail.com |
-      | inputPassword | 12345678          |
+      | inputUsername | kobebryant_81 |
+      | inputPassword | 12345678      |
     Then Click on the element
       | logInButton |
     And Verify from web element
