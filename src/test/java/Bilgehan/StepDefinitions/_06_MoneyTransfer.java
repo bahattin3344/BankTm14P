@@ -21,6 +21,11 @@ public class _06_MoneyTransfer {
 
     @When("Send keys on the element")
     public void sendKeysOnTheElement(DataTable dt) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         List<List<String>> items = dt.asLists(String.class);
 
         for (int i = 0; i < items.size(); i++) {
@@ -52,6 +57,11 @@ public class _06_MoneyTransfer {
 
     @Then("Select by the web element")
     public void selectByTheWebElement(DataTable dt) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         List<List<String>> items = dt.asLists(String.class);
 
         for (int i = 0; i < items.size(); i++) {

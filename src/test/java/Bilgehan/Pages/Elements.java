@@ -70,8 +70,47 @@ public class Elements extends Parent {
     @FindBy(xpath = "//input[@value='Send Payment']")
     private WebElement sendPaymentButton;
 
-    @FindBy(xpath = "//div[@ng-show='showForm']//h1")
+    @FindBy(xpath = "//div[@ng-show='showResult']//h1")
     private WebElement successfullBill;
+
+    @FindBy(xpath = "//h1[@class='title']")
+    private WebElement successTransfer;
+
+    @FindBy(linkText = "Accounts Overview")
+    private WebElement accountsOverview;
+
+    @FindBy(xpath = "(//tr[@class='ng-scope']//td//a)[1]")
+    private WebElement firstAccount;
+
+    @FindBy(xpath = "(//table[@id='transactionTable']//td//a)[1]")
+    private WebElement hesapIslemleri;
+
+    @FindBy(xpath = "//table/tbody/tr[1]/td[2]")
+    private WebElement transactionID;
+
+    @FindBy(linkText = "Find Transactions")
+    private WebElement findTransactions;
+
+    @FindBy(xpath = "//input[@id='criteria.transactionId']")
+    private WebElement inputTransaction;
+
+    @FindBy(xpath = "//button[@ng-click=\"criteria.searchType = 'ID'\"]")
+    private WebElement findTransactionsButton;
+
+    @FindBy(xpath = "(//tr[@class='ng-scope']//td)[2]")
+    private WebElement balanceCheck;
+
+    @FindBy(xpath = "(//tr[@class='ng-scope']//td)[3]")
+    private WebElement availableAmount;
+
+    @FindBy(xpath = "//tr[@class='ng-scope']//td[@class='ng-binding']")
+    private WebElement date;
+
+    @FindBy(xpath = "//td//a[@class='ng-binding']")
+    private WebElement fundsTransfer;
+
+    @FindBy(xpath = "//td[@ng-if=\"transaction.type == 'Debit'\"]")
+    private WebElement debit;
 
     public WebElement getWebElement(String element){
         switch (element){
@@ -96,10 +135,20 @@ public class Elements extends Parent {
             case "inputBillAmount" : return this.inputBillAmount;
             case "sendPaymentButton" : return this.sendPaymentButton;
             case "successfullBill" : return this.successfullBill;
+            case "successTransfer" : return this.successTransfer;
+            case "accountsOverview" : return this.accountsOverview;
+            case "firstAccount" : return this.firstAccount;
+            case "hesapIslemleri" : return this.hesapIslemleri;
+            case "transactionID" : return this.transactionID;
+            case "findTransactions" : return this.findTransactions;
+            case "inputTransaction" : return this.inputTransaction;
+            case "findTransactionsButton" : return this.findTransactionsButton;
+            case "balanceCheck" : return this.balanceCheck;
+            case "availableAmount" : return this.availableAmount;
+            case "date" : return this.date;
+            case "fundsTransfer" : return this.fundsTransfer;
+            case "debit" : return this.debit;
         }
         return null;
     }
-
-    // tester.14@mail.com
-    // 12345678
 }
